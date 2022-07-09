@@ -35,7 +35,7 @@ function onFormSubmit(evt) {
 
 function onLoadMoreBtnClick () {
     page +=1;
-    renderMarkupGallery(form.elements.searchQuery.value.trim());
+    renderMarkupGallery(refs.form.elements.searchQuery.value.trim());
 }
 
 
@@ -75,7 +75,7 @@ function renderMarkupGallery(search) {
           loadMoreBtn.classList.add('display-none');
         }
   
-        gallery.insertAdjacentHTML('beforeend', makeMarkupGallery(response.hits));
+        refs.gallery.insertAdjacentHTML('beforeend', makeMarkupGallery(response.hits));
   
         lightbox.refresh();
         scroll(2);
